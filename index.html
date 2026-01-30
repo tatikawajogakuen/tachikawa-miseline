@@ -9,29 +9,27 @@
       margin: 0;
       display: flex;
       justify-content: center;
-      align-items: flex-start; /* スクロール前提で上寄せ */
+      align-items: flex-start;
       min-height: 100vh;
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
 
-      /* ☁️ 青空ベース（パステルブルー）＋🍋ピンクレモネード重ね */
+      /* ☁️ 奥：学園系パステル青空 */
       background-image:
-        /* 🌸 手前：桜の枠 */
-        url("桜の枠.png"),
-        /* 🍋 中間：ピンクレモネードのやわらかいベール */
+        /* 🌸 手前：桜フレーム */
+        url("ED045D92-3E53-4269-B37C-67D0C1628442.jpeg"),
+        
+        /* ☁️ 奥：青空 */
         linear-gradient(
           180deg,
-          rgba(200, 235, 255, 1) 0%,   /* 明るい学園ブルー */
+          rgba(200, 235, 255, 1) 0%,
           rgba(220, 245, 255, 1) 45%,
           rgba(245, 252, 255, 1) 100%
-        ) 0%,
-          rgba(210, 235, 255, 1) 50%,
-          rgba(235, 245, 255, 1) 100%
         );
 
-      background-repeat: repeat-y, no-repeat, no-repeat; /* 両方とも縦にリピート */
-      background-position: center top, center top, center top;
+      background-repeat: repeat-y, no-repeat, no-repeat;
       background-size: cover, cover, cover;
-      background-attachment: scroll, scroll; /* iOS対策 */
+      background-position: center top, center top, center top;
+      background-color: rgba(220,245,255,1); /* ← 白対策の保険 */
     }
 
     .popup {
