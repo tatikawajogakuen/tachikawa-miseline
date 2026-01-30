@@ -186,11 +186,12 @@
       display: flex;
       justify-content: center;
       margin-bottom: 16px;
+      overflow: visible; /* ロゴをはみ出しOKにする */
     }
 
     .main-logo {
-      width: 100%;
-      max-width: 900px; /* 目立つように大きめ */
+      width: 200%; /* ★ここで2倍 */
+      max-width: none; /* 親の制限を解除 */
       height: auto;
       filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
     }
@@ -295,5 +296,3 @@
   </div>
 </body>
 </html>
-
-
