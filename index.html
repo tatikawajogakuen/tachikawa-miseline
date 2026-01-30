@@ -110,21 +110,26 @@
       padding: 16px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       backdrop-filter: blur(6px);
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* カード内を中央寄せ */
     }
 
     .howto-steps {
-      display: grid;
-      grid-template-columns: 1fr; /* 1列表示に変更 */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* 画像を中央寄せ */
       gap: 12px;
+      width: 100%;
     }
 
     .howto-steps img {
       width: 100%;
-      max-width: 280px; /* 画像を中央にまとめる */
-      margin: 0 auto; /* 中央寄せ */
+      max-width: 260px; /* スマホで自然な幅 */
+      margin: 0 auto; /* 念のため中央寄せ */
       display: block;
       border-radius: 12px;
-      background: rgba(255,245,250,0.9); /* 背景と馴染む色 */
+      background: rgba(255,245,250,0.9);
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
