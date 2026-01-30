@@ -83,6 +83,74 @@
       box-sizing: border-box;
       margin-bottom: 40px; /* 下に余白を作ってスクロール感を出す */
     }
+      
+    .howto-section {
+      width: 100%;
+      margin-top: 8px;
+      padding-bottom: 40px;
+    }
+
+    .howto-title {
+      font-size: 18px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .howto-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .howto-card {
+      background: rgba(255,255,255,0.18);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      backdrop-filter: blur(6px);
+    }
+
+    .howto-steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .howto-steps img {
+      width: 100%;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .howto-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .howto-image {
+      width: 100%;
+      height: 160px;
+      background: #ffffff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .howto-text {
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
@@ -102,7 +170,50 @@
     <div class="qr-box">
       <img src="立川女学園LINE_QR.jpg" alt="LINE QRコード" style="width:100%; height:100%; object-fit:contain; border-radius:12px;" />
     </div>
+      <!-- 追加方法セクション -->
+    <div class="howto-section">
+      <div class="howto-title">追加方法について</div>
+      <div class="howto-grid">
+        <!-- QRからの追加方法 -->
+        <div class="howto-card">
+          <div class="howto-card-title">QRからの追加方法</div>
+          <div class="howto-steps">
+            <img src="LINE追加手順QR①.jpg" alt="QR手順1">
+            <img src="LINE追加手順QR②.jpg" alt="QR手順2">
+            <img src="LINE追加手順QR③.jpg" alt="QR手順3">
+            <img src="LINE追加手順QR④.jpg" alt="QR手順4">
+            <img src="LINE追加手順QR⑤.jpg" alt="QR手順5">
+            <img src="LINE追加手順QR⑥.jpg" alt="QR手順6">
+          </div>
+          <div class="howto-text">
+            LINEアプリを開き、友だち追加画面から
+            「QRコード」を選んで読み取るだけで、
+            すぐに友だち追加できます。
+          </div>
+        </div>
+
+        <!-- IDからの追加方法 -->
+        <div class="howto-card">
+          <div class="howto-card-title">IDからの追加方法</div>
+          <div class="howto-steps">
+            <img src="LINE追加手順ID①.jpg" alt="ID手順1">
+            <img src="LINE追加手順ID②.jpg" alt="ID手順2">
+            <img src="LINE追加手順ID③.jpg" alt="ID手順3">
+            <img src="LINE追加手順ID④.jpg" alt="ID手順4">
+          </div>
+          <div class="howto-text">
+            LINEアプリの友だち追加画面で
+            「ID検索」を選び、<br>
+            <strong>tachijyo01</strong> を入力して
+            追加してください。
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+  </div>
+    </div>
   </div>
 </body>
 </html>
-
