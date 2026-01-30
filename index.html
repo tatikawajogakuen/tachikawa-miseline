@@ -9,34 +9,33 @@
       margin: 0;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: flex-start; /* スクロール前提で上寄せ */
       min-height: 100vh;
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
 
-      /* ☁️ 奥：学園系パステル青空 */
+      /* ☁️ 青空ベース（パステルブルー）＋🍋ピンクレモネード重ね */
       background-image:
-        /* 🌸 手前：桜フレーム（左右に出す用） */
-        url("ED045D92-3E53-4269-B37C-67D0C1628442.jpeg"),
-        /* ☁️ 奥：青空 */
+        /* 🌸 手前：桜の枠 */
+        url("桜の枠.png"),
+        /* ☁️ 奥：青空パステルブルー */
         linear-gradient(
           180deg,
-          rgba(200, 235, 255, 1) 0%,
-          rgba(220, 245, 255, 1) 45%,
-          rgba(245, 252, 255, 1) 100%
+          #b7ddff 0%,
+          #d6ecff 50%,
+          #eef7ff 100%
         );
 
-      /* 桜だけを左右に見せる調整 */
       background-repeat: repeat-y, no-repeat;
-      background-size: 140% auto, cover; /* ← 桜を横に大きく */
       background-position: center top, center top;
-      background-color: rgba(220,245,255,1); /* ← 白対策の保険 */
+      background-size: cover, cover;
+      background-attachment: scroll, scroll; /* iOS対策 */
     }
 
     .popup {
       width: 375px;
       height: 667px;
       position: relative;
-      color: #5a1f2e;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -54,7 +53,7 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       margin-bottom: 24px;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+      color: #5a1f2e; /* 手順説明文と同色 */
     }
 
     .main-text {
@@ -79,7 +78,7 @@
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 24px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      color: #5a1f2e; /* 手順説明文と同色 */
     }
 
     .description {
@@ -87,7 +86,7 @@
       text-align: center;
       line-height: 1.6;
       margin-bottom: 24px;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      color: #5a1f2e; /* 手順説明文と同色 */
     }
 
     .qr-box {
@@ -107,26 +106,26 @@
     }
 
     .howto-title {
-      font-size: 24px; /* 大見出し */
+      font-size: 24px;
       font-weight: 900;
       text-align: center;
       margin-bottom: 20px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      color: #5a1f2e; /* 手順説明文と同色 */
     }
 
     .howto-title-sub {
-      font-size: 16px; /* 中見出し */
+      font-size: 16px;
       font-weight: 700;
       text-align: center;
       margin-bottom: 16px;
-      opacity: 0.95;
+      color: #5a1f2e; /* 手順説明文と同色 */
     }
 
     .howto-title-mini {
-      font-size: 13px; /* 小見出し */
+      font-size: 13px;
       text-align: center;
       margin-bottom: 12px;
-      opacity: 0.9;
+      color: #5a1f2e; /* 手順説明文と同色 */
     }
 
     .howto-grid {
@@ -165,11 +164,11 @@
     }
 
     .howto-card-title {
-      font-size: 18px; /* 中見出し */
+      font-size: 18px;
       font-weight: 800;
       margin-bottom: 14px;
       text-align: center;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+      color: #5a1f2e; /* 手順説明文と同色 */
     }
 
     .howto-image {
@@ -221,7 +220,7 @@
       text-align: center;
       font-size: 16px;
       font-weight: 800;
-      color: #5a1f2e;
+      color: #fff;
       text-decoration: none;
       border-radius: 999px;
       background: linear-gradient(135deg, #ff7aa2, #ff4f7d);
