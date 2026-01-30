@@ -181,13 +181,29 @@
       padding: 14px;
       backdrop-filter: blur(8px);
     }
-  </style>
+  .logo-area {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .main-logo {
+      width: 100%;
+      max-width: 300px; /* 目立つように大きめ */
+      height: auto;
+      filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+    }
+
+</style>
 </head>
 <body>
   <div class="popup">
     <div class="small-title">LINE お店のアカウント</div>
 
-    <div class="main-text">立川女学園</div>
+    <div class="logo-area">
+      <img src="立川女学園ロゴ.png" alt="立川女学園 ロゴ" class="main-logo" />
+    </div>
 
     <div class="account">@tachijyo01</div>
 
