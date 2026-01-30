@@ -15,18 +15,26 @@
 
       /* ☁️ 青空ベース（パステルブルー）＋🍋ピンクレモネード重ね */
       background-image:
+        /* 🌸 手前：桜の枠 */
+        url("桜の枠.png"),
+        /* 🍋 中間：ピンクレモネードのやわらかいベール */
         linear-gradient(
           180deg,
-          rgba(180, 220, 255, 0.95) 0%,
-          rgba(210, 235, 255, 0.95) 45%,
-          rgba(255, 200, 220, 0.55) 70%,
-          rgba(255, 235, 245, 0.6) 100%
+          rgba(255, 200, 220, 0.45) 0%,
+          rgba(255, 225, 235, 0.35) 50%,
+          rgba(255, 240, 245, 0.25) 100%
         ),
-        url("桜の枠.png");
+        /* ☁️ 奥：青空パステルブルー */
+        linear-gradient(
+          180deg,
+          rgba(180, 220, 255, 1) 0%,
+          rgba(210, 235, 255, 1) 50%,
+          rgba(235, 245, 255, 1) 100%
+        );
 
-      background-repeat: repeat-y, repeat-y; /* 両方とも縦にリピート */
-      background-position: center top, center top;
-      background-size: cover, cover;
+      background-repeat: repeat-y, no-repeat, no-repeat; /* 両方とも縦にリピート */
+      background-position: center top, center top, center top;
+      background-size: cover, cover, cover;
       background-attachment: scroll, scroll; /* iOS対策 */
     }
 
