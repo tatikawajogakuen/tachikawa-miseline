@@ -11,9 +11,14 @@
       justify-content: center;
       align-items: flex-start; /* スクロール前提で上寄せ */
       min-height: 100vh;
-      background: linear-gradient(180deg, #ffd1dc 0%, #ffb7c5 45%, #fff1a8 100%); /* ピンクレモネード */
-      background-attachment: fixed; /* 背景固定 */
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+
+      /* 🌸 桜背景（左右に花・縦リピート） */
+      background-image: url("桜の枠.png");
+      background-repeat: repeat-y; /* 縦に途切れず並べる */
+      background-position: center top; /* スマホで左右に花が出る */
+      background-size: cover; /* 画面幅いっぱいにフィット */
+      background-attachment: scroll; /* iOS対策：fixedにしない */
     }
 
     .popup {
@@ -193,6 +198,7 @@
       width: 200%; /* ★ここで2倍 */
       max-width: none; /* 親の制限を解除 */
       height: auto;
+      
     }
 
 .action-button {
@@ -226,7 +232,7 @@
       <img src="立川女学園ロゴ.png" alt="立川女学園 ロゴ" class="main-logo" />
     </div>
 
-    <div class="account">@tachijyo01</div>
+    <div class="account">ID:tachijyo01</div>
 
     <div class="description">
       LINEの「友だち追加」から、ID検索するか<br>
@@ -295,6 +301,3 @@
   </div>
 </body>
 </html>
-
-
-
