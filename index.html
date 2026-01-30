@@ -24,7 +24,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 32px 20px;
+      padding: 32px 20px 96px; /* 下に固定ボタン分の余白を追加 */
       box-sizing: border-box;
       overflow-y: auto; /* 中身だけスクロール */
       -webkit-overflow-scrolling: touch;
@@ -195,6 +195,30 @@
       filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
     }
 
+.back-to-top {
+      position: fixed; /* 画面下に固定 */
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 14px 20px;
+      width: calc(100% - 40px);
+      max-width: 335px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff7aa2, #ff9eb5);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      z-index: 1000; /* 常に最前面 */
+    }
+
+    .back-to-top:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+
 </style>
 </head>
 <body>
@@ -266,10 +290,8 @@
     </div>
 
       
-  </div>
-    </div>
+      <!-- TOPへ戻るボタン -->
+<a href="https://tatikawajogakuen.github.io/tachikawa-job/" class="back-to-top">TOP画面に戻る</a>
   </div>
 </body>
 </html>
-
-
