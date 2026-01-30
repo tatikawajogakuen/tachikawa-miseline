@@ -197,7 +197,7 @@
 
 .back-to-top {
       position: fixed; /* 画面下に固定 */
-      bottom: 16px;
+      bottom: 12px; /* iPhoneでも確実に見える位置 */
       left: 50%;
       transform: translateX(-50%);
       padding: 14px 20px;
@@ -211,7 +211,8 @@
       border-radius: 999px;
       background: linear-gradient(135deg, #ff7aa2, #ff9eb5);
       box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-      z-index: 1000; /* 常に最前面 */
+      z-index: 9999; /* Safari対策で最前面 */
+      padding-bottom: env(safe-area-inset-bottom);
     }
 
     .back-to-top:active {
