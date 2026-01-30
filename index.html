@@ -15,9 +15,8 @@
 
       /* ☁️ 奥：学園系パステル青空 */
       background-image:
-        /* 🌸 手前：桜フレーム */
+        /* 🌸 手前：桜フレーム（左右に出す用） */
         url("ED045D92-3E53-4269-B37C-67D0C1628442.jpeg"),
-        
         /* ☁️ 奥：青空 */
         linear-gradient(
           180deg,
@@ -26,8 +25,9 @@
           rgba(245, 252, 255, 1) 100%
         );
 
+      /* 桜だけを左右に見せる調整 */
       background-repeat: repeat-y, no-repeat;
-      background-size: cover, cover;
+      background-size: 140% auto, cover; /* ← 桜を横に大きく */
       background-position: center top, center top;
       background-color: rgba(220,245,255,1); /* ← 白対策の保険 */
     }
