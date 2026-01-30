@@ -13,12 +13,21 @@
       min-height: 100vh;
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
 
-      /* 🌸 桜背景（左右に花・縦リピート） */
-      background-image: url("桜の枠.png");
-      background-repeat: repeat-y; /* 縦に途切れず並べる */
-      background-position: center top; /* スマホで左右に花が出る */
-      background-size: cover; /* 画面幅いっぱいにフィット */
-      background-attachment: scroll; /* iOS対策：fixedにしない */
+      /* ☁️ 青空ベース（パステルブルー）＋🍋ピンクレモネード重ね */
+      background-image:
+        linear-gradient(
+          180deg,
+          rgba(180, 220, 255, 0.95) 0%,
+          rgba(210, 235, 255, 0.95) 45%,
+          rgba(255, 200, 220, 0.55) 70%,
+          rgba(255, 235, 245, 0.6) 100%
+        ),
+        url("桜の枠.png");
+
+      background-repeat: repeat-y, repeat-y; /* 両方とも縦にリピート */
+      background-position: center top, center top;
+      background-size: cover, cover;
+      background-attachment: scroll, scroll; /* iOS対策 */
     }
 
     .popup {
