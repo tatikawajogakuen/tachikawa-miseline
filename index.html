@@ -24,7 +24,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 32px 20px 96px; /* 下に固定ボタン分の余白を追加 */
+      padding: 32px 20px;
       box-sizing: border-box;
       overflow-y: auto; /* 中身だけスクロール */
       -webkit-overflow-scrolling: touch;
@@ -195,27 +195,23 @@
       filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
     }
 
-.back-to-top {
-      position: fixed; /* 画面下に固定 */
-      bottom: 12px; /* iPhoneでも確実に見える位置 */
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 14px 20px;
-      width: calc(100% - 40px);
-      max-width: 335px;
+.action-button {
+      display: block;
+      width: 100%;
+      max-width: 260px;
+      margin: 16px auto;
+      padding: 14px 16px;
       text-align: center;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 800;
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       border-radius: 999px;
-      background: linear-gradient(135deg, #ff7aa2, #ff9eb5);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-      z-index: 9999; /* Safari対策で最前面 */
-      padding-bottom: env(safe-area-inset-bottom);
+      background: linear-gradient(135deg, #ff7aa2, #ff4f7d);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     }
 
-    .back-to-top:active {
+    .action-button:active {
       transform: translateY(1px);
       box-shadow: 0 4px 10px rgba(0,0,0,0.25);
     }
@@ -224,13 +220,13 @@
 </head>
 <body>
   <div class="popup">
-    <div class="small-title">お店のLINEアカウント</div>
+    <div class="small-title">LINE お店のアカウント</div>
 
     <div class="logo-area">
       <img src="立川女学園ロゴ.png" alt="立川女学園 ロゴ" class="main-logo" />
     </div>
 
-    <div class="account">ID:tachijyo01</div>
+    <div class="account">@tachijyo01</div>
 
     <div class="description">
       LINEの「友だち追加」から、ID検索するか<br>
@@ -244,6 +240,8 @@
     <div class="description" style="margin-top:-24px; margin-bottom:32px; font-size:12px; opacity:0.95;">
       QRコードの画像は<strong>長押しで保存</strong>できるよ！
     </div>
+
+    <a href="https://tatikawajogakuen.github.io/tachikawa-job/" class="action-button">TOP画面に戻る</a>
 
       <!-- 追加方法セクション -->
     <div class="howto-section">
@@ -285,14 +283,15 @@
             「ID検索」を選び、<br>
             <strong>tachijyo01</strong> を入力すれば<br>
             友だち追加できます。
-          </div>
+                  
+      </div>
+          <a href="https://tatikawajogakuen.github.io/tachikawa-job/" class="action-button">TOP画面に戻る</a>
         </div>
       </div>
-    </div>
 
       
-      <!-- TOPへ戻るボタン -->
-<a href="https://tatikawajogakuen.github.io/tachikawa-job/" class="back-to-top">TOP画面に戻る</a>
+  </div>
+    </div>
   </div>
 </body>
 </html>
